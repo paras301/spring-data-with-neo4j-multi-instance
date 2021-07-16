@@ -1,0 +1,5 @@
+cypher_queries:
+  createOrder: >
+    MERGE (c:Customer{name: "${name}", customerId: "${customerId}"})
+    MERGE (o:Order{orderId: "${orderId}", orderDate: "${orderDate}"})<-[:PLACED]-(c)
+    MERGE (oitem:OrderItem{item: "${item}", unit_price: "${unit_price}", quantity: "${quantity}"})<-[:HAS_ITEMS]-(o)

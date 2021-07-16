@@ -1,0 +1,10 @@
+spring:
+  neo4j:
+    uri: neo4j://localhost:7687
+    database: test12
+    authentication:
+      username: neo4j
+      password: test12
+logging:
+  level:
+    root: INFO
