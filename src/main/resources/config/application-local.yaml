@@ -1,7 +1,13 @@
 spring:
-  neo4j:
+  neo4j1:
     uri: neo4j://localhost:7687
     database: test12
+    authentication:
+      username: neo4j
+      password: test12
+  neo4j2:
+    uri: neo4j://localhost:7687
+    database: test13
     authentication:
       username: neo4j
       password: test12

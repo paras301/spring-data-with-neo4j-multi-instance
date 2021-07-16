@@ -1,4 +1,6 @@
 cypher_queries:
+  getCustomerMaster: >
+    MATCH (c:Customer{customerId: "${customerId}"}) RETURN c.name
   createOrder: >
     MERGE (c:Customer{name: "${name}", customerId: "${customerId}"})
     MERGE (o:Order{orderId: "${orderId}", orderDate: "${orderDate}"})<-[:PLACED]-(c)

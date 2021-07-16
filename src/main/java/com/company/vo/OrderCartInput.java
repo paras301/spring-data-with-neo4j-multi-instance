@@ -11,7 +11,6 @@ import lombok.ToString;
 @ToString
 public class OrderCartInput {
 	private String customerId;
-	private String name;
 	private String orderId;
 	private String orderDate;
 	private List<OrderItem> items;
